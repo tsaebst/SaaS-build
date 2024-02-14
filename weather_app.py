@@ -20,10 +20,10 @@ class InvalidUsage(Exception):
         rv["message"] = self.message
         return rv
 
-
-API_TOKEN = "Medeya2017!"
+# here is your token
+API_TOKEN = ""
 #your personal key here
-key = "RCWWMPLADXCCSTWC9Q6KCL9PG"
+key = ""
 
 # request data from api using your personal key
 # use the link to create your own one: https://www.visualcrossing.com/account
