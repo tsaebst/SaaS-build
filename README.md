@@ -8,4 +8,4 @@ Practice 1: Python SaaS
 5) insert the created token and key to the file weather_app.py
 
 
-# Developed by: Spitkovska Vladyslava
+ Developed by: Spitkovska Vladyslava
