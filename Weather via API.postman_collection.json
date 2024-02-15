@@ -13,14 +13,14 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"token\":\"Medeya2017!\",\n    \"requester_name\": \"Vlada Spitkovska\",\n    \"location\": \"Lviv, Ukraine\",\n    \"date\": \"2022-05-17\" \n}",
+					"raw": "{\n    \"token\":\"\",\n    \"requester_name\": \"\",\n    \"location\": \"Lviv, Ukraine\",\n    \"date\": \"2022-05-17\" \n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "http://51.20.252.110:8000/link"
+				"url": "http://<enter your ip>:8000/link"
 			},
 			"response": []
 		}
