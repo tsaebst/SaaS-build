@@ -20,19 +20,16 @@ class InvalidUsage(Exception):
         rv["message"] = self.message
         return rv
 
-# here is your token
-API_TOKEN = ""
+API_TOKEN = "Medeya2017!"
 #your personal key here
-key = ""
+key = "RCWWMPLADXCCSTWC9Q6KCL9PG"
 
 # request data from api using your personal key
 # use the link to create your own one: https://www.visualcrossing.com/account
 def generate_weather(location: str, date: str):
     url = f"https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/{location}/{date}?include=days&key={key}"
 
-    headers = {"X-Api-Key": key}
-
-    response = requests.get(url, headers=headers)
+    response = requests.get(url)
 
     if response.status_code == requests.codes.ok:
         return json.loads(response.text)
@@ -55,7 +52,7 @@ def home_page():
 def format_date(timestamp):
     return timestamp.split("T")[0]
 
-#function for weather condition prediction based on specific data
+
 def prediction(data, temp):
     prediction = data["description"]
     snow = data["snow"]
@@ -63,16 +60,15 @@ def prediction(data, temp):
     sunset = data["sunset"]
     result = str(prediction)
     if temp > 10:
-        result += ". It's going to be warm outside. "
+        result += ". It's going to be warm outside."
     elif temp > 0 and temp < 10:
-        result += ". We recommend to on some warm clothes. "
+        result += ". We recommend to on some warm clothes."
     else:
-        result += ". Temperature is going to be low through the day. "
+        result += ". Temperature is going to be low through the day."
     if snow > 0:
-        result+= "Expect for the snow today."
+        result+= " Expect for the snow today."
     result+= f" Sunrise time: {sunrise}. Sunset time: {sunset}. "
     return result
-
 
 # function for dict creating
 def extract_weather_data(data, requester_name, location, date):
@@ -81,7 +77,7 @@ def extract_weather_data(data, requester_name, location, date):
     weather = {
         "temp_c": temp,
         "wind_kph": weather_data['windspeed'],
-        "pressure_mb": (weather_data['pressure'] / 10000),
+        "pressure_mb": (weather_data['pressure']),
         "humidity": weather_data['humidity'],
         "prediction" : prediction(weather_data, temp)
     }
@@ -120,4 +116,5 @@ def weather_endpoint():
     data = extract_weather_data(weather, requester_name, location, date)
 
     return data
+
 
