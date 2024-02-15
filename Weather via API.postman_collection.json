@@ -1,0 +1,28 @@
+{
+	"info": {
+		"_postman_id": "dc93e568-9076-49e8-bdcc-85d8d976ee74",
+		"name": "Weather via API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "32687630"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"token\":\"Medeya2017!\",\n    \"requester_name\": \"Vlada Spitkovska\",\n    \"location\": \"Lviv, Ukraine\",\n    \"date\": \"2022-05-17\" \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://51.20.252.110:8000/link"
+			},
+			"response": []
+		}
+	]
+}
