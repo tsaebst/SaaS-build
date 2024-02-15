@@ -9,8 +9,8 @@ uwsgi --http 0.0.0.0:8000 --wsgi-file weather_app.py --callable app --processes 
 5) insert the created token and key to the file weather_app.py
 
 Additional notes:
-Don't forget to upgrade your python version to 3.8.0 and pyenv to 2.3.35
-Install requirements.txt via "pip install -r requirements.txt"
-If you encounter any issues, please refer to the documentation or contact the developer.
+1. Don't forget to upgrade your python version to 3.8.0 and pyenv to 2.3.35
+2. Install requirements.txt via "pip install -r requirements.txt"
+3. If you encounter any issues, please refer to the documentation or contact the developer.
  
 Developed by: Spitkovska Vladyslava 
