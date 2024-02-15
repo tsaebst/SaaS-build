@@ -51,24 +51,39 @@ def handle_invalid_usage(error):
 def home_page():
     return "<p><h2>KMA L2: python Saas.</h2></p>"
 
-# additional functions for changing data to the correct forms
+# additional function for datetime
 def format_date(timestamp):
     return timestamp.split("T")[0]
 
-def fahrenheit_to_celsius(t):
-    return (t - 32) * 5.0/9.0
+#function for weather condition prediction based on specific data
+def prediction(data, temp):
+    prediction = data["description"]
+    snow = data["snow"]
+    sunrise = data["sunrise"]
+    sunset = data["sunset"]
+    result = str(prediction)
+    if temp > 10:
+        result += ". It's going to be warm outside. "
+    elif temp > 0 and temp < 10:
+        result += ". We recommend to on some warm clothes. "
+    else:
+        result += ". Temperature is going to be low through the day. "
+    if snow > 0:
+        result+= "Expect for the snow today."
+    result+= f" Sunrise time: {sunrise}. Sunset time: {sunset}. "
+    return result
 
-def to_milibars(value):
-    return (value/10000)
 
 # function for dict creating
 def extract_weather_data(data, requester_name, location, date):
     weather_data = data['days'][0]
+    temp = (weather_data['temp'] -32)*(5/9)
     weather = {
-        "temp_c": fahrenheit_to_celsius(weather_data['temp']),
+        "temp_c": temp,
         "wind_kph": weather_data['windspeed'],
-        "pressure_mb": to_milibars(weather_data['pressure']),
+        "pressure_mb": (weather_data['pressure'] / 10000),
         "humidity": weather_data['humidity'],
+        "prediction" : prediction(weather_data, temp)
     }
     result = {
         "requester_name": requester_name,
