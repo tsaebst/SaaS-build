@@ -1,4 +1,4 @@
-# SaaS-build
+# SaaS-build (Weather getter)
 Practice 1: Python SaaS 
 #To use this code you have to:
 1) have your own key generated (use the link in weather_app.py)
