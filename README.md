@@ -11,6 +11,6 @@ uwsgi --http 0.0.0.0:8000 --wsgi-file weather_app.py --callable app --processes 
 Additional notes:
 1. Don't forget to upgrade your python version to 3.8.0 and pyenv to 2.3.35
 2. Install requirements.txt via "pip install -r requirements.txt"
-3. If you encounter any issues, please refer to the documentation or contact the developer.
+3. If you encounter any issues, please refer to the documentation or contact the developer (me).
  
 Developed by: Spitkovska Vladyslava 
