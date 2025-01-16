@@ -23,7 +23,7 @@ This project is a Python-based SaaS application designed to fetch weather data f
    cd SaaS-build
 
 This revised README provides a clear and structured guide for setting up and running the weather fetching SaaS application. Let me know if you need further assistance or additional information!
-::contentReference[Spitkovska Vladyslava](https://github.com/tsaebst)
+:: [Spitkovska Vladyslava](https://github.com/tsaebst)
 
  
 
