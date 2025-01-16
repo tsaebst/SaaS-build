@@ -1,16 +1,28 @@
-# SaaS-build (Weather getter)
-Practice 1: Python SaaS 
-#To use this code you have to:
-1) have your own key generated (use the link in weather_app.py)
-2) have a Postman installed (10.22.9 is recommended)
-3) have weather_app.py file on your jupyter notebook server
-4) donnect to the file using the following command:
-uwsgi --http 0.0.0.0:8000 --wsgi-file weather_app.py --callable app --processes 4 --threads 2 --stats 127.0.0.1:9191 command.
-5) insert the created token and key to the file weather_app.py
+# SaaS-build (Weather Getter)
 
-Additional notes:
-1. Don't forget to upgrade your python version to 3.8.0 and pyenv to 2.3.35
-2. Install requirements.txt via "pip install -r requirements.txt"
-3. If you encounter any issues, please refer to the documentation or contact the developer (me).
+**Practice 1: Python SaaS**
+
+This project is a Python-based SaaS application designed to fetch weather data from an external API. Follow the steps below to set up and run the application.
+
+## Prerequisites
+
+- **Python 3.8.0**: Ensure your Python version is upgraded to 3.8.0. You can manage Python versions using [pyenv](https://github.com/pyenv/pyenv); ensure it's updated to version 2.3.35.
+
+- **Postman**: Install Postman for API testing. Version 10.22.9 is recommended.
+
+- **uWSGI**: Install uWSGI to serve the application.
+
+## Setup Instructions
+
+1. **Generate an API Key**: Obtain your own API key by following the link provided in the `weather_app.py` file.
+
+2. **Clone the Repository**: Download the project files to your local machine.
+
+   ```bash
+   git clone https://github.com/tsaebst/SaaS-build.git
+   cd SaaS-build
+
+This revised README provides a clear and structured guide for setting up and running the weather fetching SaaS application. Let me know if you need further assistance or additional information!
+::contentReference[oaicite:0]{index=0}
  
-Developed by: Spitkovska Vladyslava 
+
